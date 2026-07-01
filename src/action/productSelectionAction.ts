@@ -161,6 +161,7 @@ export class productSelectorAction
         await this.productSelectorPages.selectSizeXL.click()
 
         // verify total product count after filter M and XL
+        await this.productSelectorPages.page.waitForTimeout(3000)
         await expect(this.productSelectorPages.totalProductCount).toHaveText(testData.ProductCount)
         const totalCount = await this.productSelectorPages.totalProductCount.count()
         console.log("Total Product Count after filter M and XL:",totalCount)

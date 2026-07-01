@@ -28,6 +28,6 @@ test('TC_06 Update Cart Quantity for XL Product and Verify Total Amount', async(
     await appAction.product.updateCartQuantiy(testData.UpdateCartQuantityXL)
 });
 
-test.only('TC_07 Checkout Product and Verify Checkout Page', async({appAction}) => {
+test('TC_07 Checkout Product and Verify Checkout Page', async({appAction}) => {
     await appAction.product.checkoutProduct()
 });
