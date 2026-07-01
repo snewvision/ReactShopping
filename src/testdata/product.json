@@ -1,0 +1,51 @@
+{
+    "BaseURL": "https://react-shopping-cart-67954.firebaseapp.com/products%27%27",
+    "ProductData" : 
+    {
+        "firstProduct":"Cropped Stay Groovy off white",
+        "Product_10_90_Count": 4,
+        "Product_14_90_Count": 2,
+        "Product_Count1": 1,
+        "SizeS" : "S | Really Cool T-shirt Quantity: 1",
+        "CardQuantity": 1,
+        "AfterCartRemoveMessage" : "Add some products in the cart :)",
+        "SfirstCartTotalAmount" : "$ 10.90"
+    },
+    "AllProduct1090" : 
+    {
+        "Count1090Product": 4,
+        "verifyIconCount1090" : 4,
+        "TotalAmount1090" : "$ 43.60",
+        "FistProduct1090":"Cropped Stay Groovy off white",
+        "SecondProduct1090":"Black Batman T-shirt",
+        "ThirdProduct1090":"Ringer Hall Pass",
+        "FourthProduct1090":"Turtles Ninja T-shirt"
+
+    },
+    "AllProduct1490" : 
+    {
+        "Count1490Product": 2,
+        "verifyIconCount1490" : 2,
+        "TotalAmount1490" : "$ 29.80",
+        "FistProduct1490":"Grey T-shirt",
+        "SecondProduct1490":"Black T-shirt with white stripes",
+        "FirstProductAmount1490" : "$  14.90",
+        "SecondProductAmount1490" : "$  14.90"
+
+    },
+
+    "ProductSelectionMorXL" : 
+    {
+        "ProductCount" : "11 Product(s) found",
+        "IconCoutMXL" : 2,
+        "ValidateProductSizeXL":"XL | Tony Hawk Quantity: 1",
+        "ValidateProductSizeM":"M | Tule Quantity: 1",
+        "TotalAmountMXL" : "$ 55.35"
+    },
+    "UpdateCartQuantityXL" : 
+    {
+        "verifyXLProductQuantity" : "XL | Tony Hawk Quantity: 2",
+        "UpdatedTotalAmountMXL" : "$ 84.80"
+
+    }
+}
