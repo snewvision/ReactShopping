@@ -31,3 +31,7 @@ test('TC_06 Update Cart Quantity for XL Product and Verify Total Amount', async(
 test('TC_07 Checkout Product and Verify Checkout Page', async({appAction}) => {
     await appAction.product.checkoutProduct()
 });
+
+test('TC_08 Remove Products from Cart and Verify Cart is Empty', async({appAction}) => {
+    await appAction.product.removeCart(testData.RemoveCartProduct)
+});

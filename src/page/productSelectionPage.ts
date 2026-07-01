@@ -62,6 +62,11 @@ export class productSelectorPage
     // checkout
     readonly checkoutButton : Locator
 
+    //Remove Cart
+    readonly firstProductRemove : Locator
+    readonly secondProductRemove : Locator
+    readonly totalAmountAfterRemove : Locator
+    readonly afterCartRemoveMessage2 : Locator
 
     constructor(page:Page)
     {
@@ -107,7 +112,8 @@ export class productSelectorPage
         // Filter M , XL
         this.selectSizeM = page.locator('//span[text() = "M"]')
         this.selectSizeXL = page.locator('//span[text() = "XL"]')
-        this.totalProductCount = page.locator('//main[@class="sc-ebmerl-4 iliWeY"]')
+        //this.totalProductCount = page.locator('//main[@class="sc-ebmerl-4 iliWeY"]')
+        this.totalProductCount = page.locator('//p[contains(text(), "11")]')
         this.addToCartButtonXL = page.locator('//parent::div[@class="sc-124al1g-2 ddJZtb"]//button[text() = "Add to cart"]')
         this.addToCartButtonM = page.locator('//parent::div[@class="sc-124al1g-2 keuquD"]//button[text() = "Add to cart"]')
         this.iconCoutMXL = page.locator('//div[@class="sc-1h98xa9-3 VLMSP"]')
@@ -124,5 +130,11 @@ export class productSelectorPage
 
         //checkout button
         this.checkoutButton = page.locator('//button[text() = "Checkout"]')
+
+        //Remove Cart
+        this.firstProductRemove = page.locator('//img[@src="/static/media/9197907543445676-1-cart.06382e6e916ca43f0304.webp"]/parent::div/child::button[@title="remove product from cart"]')
+        this.secondProductRemove = page.locator('//img[@src="/static/media/51498472915966370-1-cart.d53b5b1e58a84e19b7b0.webp"]/parent::div/child::button[@title="remove product from cart"]')
+        this.totalAmountAfterRemove = page.locator('//p[text() = "$ 0.00"]')
+        this.afterCartRemoveMessage2 = page.locator('//p[contains(text() , "Add some products in the cart" )]')
     }
 }

@@ -50,6 +50,12 @@ type UpdateCartQuantityXL =
     UpdatedTotalAmountMXL : string
 }
 
+type RemoveCartProduct =
+{
+    AfterCartRemoveMessage2 : string
+    TotalAmountAfterRemove : string
+}
+
 export class productSelectorAction 
 {
     private readonly productSelectorPages : productSelectorPage;
@@ -161,7 +167,7 @@ export class productSelectorAction
         await this.productSelectorPages.selectSizeXL.click()
 
         // verify total product count after filter M and XL
-        await this.productSelectorPages.page.waitForTimeout(3000)
+        await this.productSelectorPages.page.waitForTimeout(5000)
         await expect(this.productSelectorPages.totalProductCount).toHaveText(testData.ProductCount)
         const totalCount = await this.productSelectorPages.totalProductCount.count()
         console.log("Total Product Count after filter M and XL:",totalCount)
@@ -236,6 +242,38 @@ export class productSelectorAction
     
         // click checkout button
         await this.productSelectorPages.checkoutButton.click();    
+
+    }
+
+    async removeCart(tesData:RemoveCartProduct)
+    {
+        // select product size M and XL
+        await this.productSelectorPages.selectSizeM.click()
+        await this.productSelectorPages.selectSizeXL.click()
+
+        // click Add to Cart button for size M
+        await this.productSelectorPages.addToCartButtonM.click()
+
+        // click Add to Cart button for size XL
+        await this.productSelectorPages.addToCartButtonXL.click()
+       
+        //click the icon to verify the product size M and XL
+        await this.productSelectorPages.page.waitForTimeout(5000)
+        await this.productSelectorPages.iconCoutMXL.click()
+
+        await this.productSelectorPages.page.waitForTimeout(5000)
+        // Remove the first product from the cart
+        await this.productSelectorPages.firstProductRemove.click();
+        // Remove the second product from the cart
+        await this.productSelectorPages.secondProductRemove.click();
+
+        // verify Total Amount after remove all the product from the cart
+        await expect(this.productSelectorPages.totalAmountAfterRemove).toHaveText(tesData.TotalAmountAfterRemove)
+
+        // verify Message After cart remove
+        await expect(this.productSelectorPages.afterCartRemoveMessage2).toHaveText(tesData.AfterCartRemoveMessage2)
+        const message =  await this.productSelectorPages.afterCartRemoveMessage2.textContent();
+        console.log(message)
 
     }
 }

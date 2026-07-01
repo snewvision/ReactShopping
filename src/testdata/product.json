@@ -47,5 +47,12 @@
         "verifyXLProductQuantity" : "XL | Tony Hawk Quantity: 2",
         "UpdatedTotalAmountMXL" : "$ 81.25"
 
+    },
+
+    "RemoveCartProduct" : 
+    {
+        "AfterCartRemoveMessage2" : "Add some products in the cart :)",
+        "TotalAmountAfterRemove" : "$ 0.00"
+
     }
 }
