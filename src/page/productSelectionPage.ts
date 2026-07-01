@@ -117,7 +117,8 @@ export class productSelectorPage
 
 
         // Update cart Quantity
-        this.updateCartQuantityXL = page.locator('//p[contains(text() , "SUBTOTAL")]/preceding::button[text() = "+"][2]')
+        //this.updateCartQuantityXL = page.locator('//p[contains(text() , "SUBTOTAL")]/preceding::button[text() = "+"][2]')
+        this.updateCartQuantityXL = page.locator("//p[text()='$  25.90']/parent::div/child::div//button[text()='+']")
         this.verifyXLProductQuantity = page.locator('//p[contains(text() , "XL | Tony Hawk") and "Quantity: " and "2"]')
         this.updatedTotalAmountMXL = page.locator('//p[@class="sc-1h98xa9-9 jzywDV"]')
 
